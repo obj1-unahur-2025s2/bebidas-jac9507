@@ -1,9 +1,35 @@
-object pepita {
-  var energy = 100
+object tito {
+  
+  var efecto = 0
+  
+  method peso(){
+    return 70
+  }
 
-  method energy() = energy
+  method consumir(cantidad, bebida){
+    efecto = bebida.efecto(cantidad)
+    ultimoshot = bebida
+  }
 
-  method fly(minutes) {
-    energy = energy - minutes * 3
+  method velocidad(){
+    return efecto*(490/self.peso())
+  }
+}
+
+object whisky{
+  method efecto(cantidad){
+    return 0.9 ** cantidad
+  }
+}
+
+object terere{
+  method efecto(cantidad){
+    return (0.1 ** cantidad).max(1)
+  }
+}
+
+object cianuro{
+  method efecto(cantidad){
+    return 0
   }
 }

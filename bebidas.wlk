@@ -8,7 +8,7 @@ object tito {
 
   method consumir(cantidad, bebida){
     efecto = bebida.efecto(cantidad)
-    ultimoshot = bebida
+    ultimaBebida = bebida
   }
 
   method velocidad(){
